@@ -12,7 +12,7 @@ class SettingsScreen(QWidget):
         title = QLabel("Settings")
         title.setObjectName("title")
 
-        subtitle = QLabel("Adjust playback speed, audio input, and therapy preferences.")
+        subtitle = QLabel("Coming Soon!")
         subtitle.setObjectName("subtitle")
 
         layout.addWidget(title)
