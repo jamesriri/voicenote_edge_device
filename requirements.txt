@@ -1,0 +1,19 @@
+# SpeechMaster — Python Dependencies
+# Install: pip install -r requirements.txt
+
+PySide6>=6.6.0
+bcrypt>=4.1.0
+sounddevice>=0.4.6
+soundfile>=0.12.1
+numpy>=1.24.3
+python-Levenshtein>=0.23.0
+
+# Whisper STT — HuggingFace Transformers + PyTorch (CPU)
+transformers>=4.36.0
+torch>=2.1.0
+
+# Piper TTS — Offline text-to-speech
+piper-tts>=1.2.0
+
+# Raspberry Pi only (uncomment on Pi)
+# RPi.GPIO>=0.7.1
