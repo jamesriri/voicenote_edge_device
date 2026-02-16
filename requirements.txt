@@ -5,3 +5,48 @@ PySide6_Addons==6.10.2
 PySide6_Essentials==6.10.2
 shiboken6==6.10.2
 sounddevice==0.5.5
+
+# TESTING LIBRARIES
+
+pyttsx3
+sounddevice 
+scipy
+
+# SpeechMaster — Python Dependencies
+# Install: pip install -r requirements.txt
+
+PySide6>=6.6.0
+bcrypt>=4.1.0
+sounddevice>=0.4.6
+soundfile>=0.12.1
+numpy>=1.24.3
+python-Levenshtein>=0.23.0
+
+# Whisper STT — HuggingFace Transformers + PyTorch (CPU)
+transformers>=4.36.0
+torch>=2.1.0
+
+# Piper TTS — Offline text-to-speech
+piper-tts>=1.2.0
+
+# Raspberry Pi only (uncomment on Pi)
+# RPi.GPIO>=0.7.1
+# SpeechMaster — Python Dependencies
+# Install: pip install -r requirements.txt
+
+PySide6>=6.6.0
+bcrypt>=4.1.0
+sounddevice>=0.4.6
+soundfile>=0.12.1
+numpy>=1.24.3
+python-Levenshtein>=0.23.0
+
+# Whisper STT — HuggingFace Transformers + PyTorch (CPU)
+transformers>=4.36.0
+torch>=2.1.0
+
+# Piper TTS — Offline text-to-speech
+piper-tts>=1.2.0
+
+# Raspberry Pi only (uncomment on Pi)
+# RPi.GPIO>=0.7.1
