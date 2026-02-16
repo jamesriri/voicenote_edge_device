@@ -33,10 +33,10 @@ class AuthScreen(QWidget):
         scroll = QScrollArea()
         scroll.setWidgetResizable(True)
         scroll.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        scroll.setStyleSheet("QScrollArea { border: none; background: #ffffea; }")
+        scroll.setStyleSheet("QScrollArea { border: none; background: #f0f2ef; }")
 
         content = QWidget()
-        content.setStyleSheet("background: #ffffea;")
+        content.setStyleSheet("background: #f0f2ef;")
         main_layout = QVBoxLayout(content)
         main_layout.setAlignment(Qt.AlignCenter)
         main_layout.setContentsMargins(36, 48, 36, 36)

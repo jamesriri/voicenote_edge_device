@@ -4,6 +4,7 @@ ACCENT = "#38BDF8"
 TEXT_PRIMARY = "#E2E8F0"
 TEXT_MUTED = "#94A3B8"
 
+#  f0f2ef smoke white
 RADIUS = "16px"
 PADDING = "14px"
 
