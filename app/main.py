@@ -102,10 +102,10 @@ class MainWindow(QMainWindow):
         # Audio
         self._audio = AudioService()
 
-        if self._audio.auto_select_usb_microphone():
-            print("USB Microphone auto-selected successfully")
-        else:
-            print("No USB Mic detected")
+        # if self._audio.auto_select_usb_microphone():
+        #     print("USB Microphone auto-selected successfully")
+        # else:
+        #     print("No USB Mic detected")
 
         # LED
         self._led = LEDService()
