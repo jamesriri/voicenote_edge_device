@@ -127,3 +127,7 @@ dmypy.json
 # MODIFIED SECITON
 #PyCharm project
 .idea/
+/venv
+/data
+/models
+app.log
