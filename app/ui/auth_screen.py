@@ -72,9 +72,7 @@ class AuthScreen(QWidget):
         outer.setContentsMargins(0, 0, 0, 0)
         outer.addWidget(scroll)
 
-    # ------------------------------------------------------------------
     # Login
-    # ------------------------------------------------------------------
     def _build_login_page(self) -> QWidget:
         page = QWidget()
         page.setObjectName("authPage")
@@ -161,9 +159,7 @@ class AuthScreen(QWidget):
         layout.addStretch()
         return page
 
-    # ------------------------------------------------------------------
     # Signup
-    # ------------------------------------------------------------------
     def _build_signup_page(self) -> QWidget:
         page = QWidget()
         page.setObjectName("authPage")
@@ -238,9 +234,7 @@ class AuthScreen(QWidget):
         layout.addStretch()
         return page
 
-    # ------------------------------------------------------------------
     # Helpers
-    # ------------------------------------------------------------------
     def _make_input(self, label_text: str, placeholder: str, password: bool = False) -> QWidget:
         container = QWidget()
         container.setObjectName("authInputContainer")
@@ -286,9 +280,7 @@ class AuthScreen(QWidget):
         self._strength_label.setText(f"Password strength: {strength}")
         self._strength_label.setStyleSheet(f"font-size: 13px; color: {colors.get(strength, COLORS['text_light'])};")
 
-    # ------------------------------------------------------------------
     # Actions
-    # ------------------------------------------------------------------
     def _on_login(self):
         username = self._get_input(self._login_username)
         password = self._get_input(self._login_password)

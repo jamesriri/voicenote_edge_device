@@ -162,9 +162,7 @@ class RecordingScreen(QWidget):
 
         return page
 
-    # ==================================================================
     # Page 1 — TTS Playback
-    # ==================================================================
     def _build_playback_page(self) -> QWidget:
         from PySide6.QtWidgets import QComboBox
 
@@ -234,9 +232,7 @@ class RecordingScreen(QWidget):
         layout.addStretch()
         return page
 
-    # ==================================================================
     # Page 2 — Recording
-    # ==================================================================
     def _build_recording_page(self) -> QWidget:
         page = QWidget()
         layout = QVBoxLayout(page)
@@ -308,9 +304,7 @@ class RecordingScreen(QWidget):
         layout.addStretch()
         return page
 
-    # ==================================================================
     # Page 3 — Processing
-    # ==================================================================
     def _build_processing_page(self) -> QWidget:
         page = QWidget()
         layout = QVBoxLayout(page)
@@ -343,9 +337,7 @@ class RecordingScreen(QWidget):
         layout.addStretch()
         return page
 
-    # ==================================================================
     # Page 4 — Score Display
-    # ==================================================================
     def _build_score_page(self) -> QWidget:
         page = QWidget()
 
@@ -454,9 +446,7 @@ class RecordingScreen(QWidget):
         outer.addWidget(scroll)
         return page
 
-    # ==================================================================
     # Public
-    # ==================================================================
     def load_sentences(self):
         self._sentence_list.clear()
         sentences = self._db.get_all_sentences()
@@ -471,9 +461,7 @@ class RecordingScreen(QWidget):
         self._header_title.setText("Practice")
         self.load_sentences()
 
-    # ==================================================================
     # State transitions
-    # ==================================================================
     def _on_select_clicked(self):
         item = self._sentence_list.currentItem()
         if item:
