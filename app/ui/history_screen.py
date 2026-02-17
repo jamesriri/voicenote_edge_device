@@ -127,7 +127,6 @@ class RecordingDetailDialog(QDialog):
             self.accept()
 
 
-# ======================================================================
 class HistoryScreen(QWidget):
     """Browse and manage past recordings."""
 

@@ -7,7 +7,7 @@ import sys
 import os
 from pathlib import Path
 
-# ── Ensure the project root is on the path so "app.*" imports work ──
+# Ensure the project root is on the path so "app.*" imports work ──
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
@@ -47,9 +47,7 @@ from app.ui.recording_screen import RecordingScreen
 from app.ui.history_screen import HistoryScreen
 
 
-# ======================================================================
 # Main Window
-# ======================================================================
 class MainWindow(QMainWindow):
     """Application main window that hosts a QStackedWidget of screens."""
 
@@ -83,9 +81,7 @@ class MainWindow(QMainWindow):
 
         logger.info("Application started.")
 
-    # ------------------------------------------------------------------
     # Service init
-    # ------------------------------------------------------------------
     def _init_services(self):
         # Database
         self._db = init_database()
@@ -115,9 +111,7 @@ class MainWindow(QMainWindow):
         self._led = LEDService()
         self._led.initialize()
 
-    # ------------------------------------------------------------------
     # Stylesheet
-    # ------------------------------------------------------------------
     def _load_stylesheet(self):
         qss_path = RESOURCES_DIR / "styles" / "theme.qss"
         if qss_path.exists():
@@ -127,9 +121,7 @@ class MainWindow(QMainWindow):
         else:
             logger.warning("Stylesheet not found: %s", qss_path)
 
-    # ------------------------------------------------------------------
     # Screen construction
-    # ------------------------------------------------------------------
     def _build_screens(self):
         # 0 — Splash
         self._splash = SplashScreen(on_finished=self._on_splash_done)
@@ -170,9 +162,7 @@ class MainWindow(QMainWindow):
         # History screen
         self._history.go_back.connect(self._go_to_dashboard)
 
-    # ------------------------------------------------------------------
     # Navigation
-    # ------------------------------------------------------------------
     def _on_splash_done(self):
         self._stack.setCurrentIndex(self.SCREEN_AUTH)
 
@@ -223,9 +213,7 @@ class MainWindow(QMainWindow):
         self._stack.setCurrentIndex(self.SCREEN_AUTH)
         logger.info("User logged out.")
 
-    # ------------------------------------------------------------------
     # Cleanup
-    # ------------------------------------------------------------------
     def closeEvent(self, event):
         """Clean up on window close."""
         self._audio.stop_playback()
@@ -236,9 +224,7 @@ class MainWindow(QMainWindow):
         event.accept()
 
 
-# ======================================================================
 # Entry Point
-# ======================================================================
 def _load_bundled_fonts():
     """Load bundled Roboto font from resources."""
     fonts_dir = RESOURCES_DIR / "fonts"
